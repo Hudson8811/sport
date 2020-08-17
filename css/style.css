@@ -82,7 +82,7 @@ body {
 	background: url(../img/home/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 }
 
@@ -860,8 +860,7 @@ footer .copyright {
 	background: rgba(19, 45, 85, 0.8);
 	margin: 150px 0;
 	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 150px auto;
 }
 
 .main-text .border {
@@ -1297,6 +1296,7 @@ box-shadow: 7px 10px 100px -20px rgba(0,0,0,0.75);
 	background: url(../img/about/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
+	padding-bottom: 150px;
 }
 
 .about-info {
@@ -1559,17 +1559,19 @@ box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 
 .about-comm .content-wrap {
 	display: flex;
-	flex-direction: column;
+	margin-top: -44px;
 	flex-wrap: wrap;
-	height: 400px;
+	margin-right: -40px;
 }
 
 .about-comm .content-wrap .content-item {
-	flex-basis: 20%;
-	flex-basis: 20%;
+	width: 33.3%;
+	padding-right: 40px;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	padding-top: 44px;
 }
 
 .about-comm .content-wrap .content-item .subtitle {

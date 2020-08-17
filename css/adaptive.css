@@ -37,15 +37,20 @@
 	.home-slider-text {
 		display: none;
 	}
-
+	.home-main{
+		height: auto;
+		min-height: 100vh;
+		padding-bottom: 139px;
+	}
 	.home-main .title-bold {
 		font-size: 47px;
 		margin: 20vh 0;
 	}
 
 	.home-main .video-popup {
-		left: 43%;
+		left: 50%;
 		font-size: 16px;
+		transform: translateX(-50%);
 	}
 
 	.home-main .video-popup:before {
@@ -270,7 +275,8 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	.home-promotion-slider .owl-dots {
 		position: absolute;
 		bottom: 50px;
-		left: 42%;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.home-promotion-slider .owl-dots .owl-dot {
@@ -782,11 +788,15 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	.about-comm .content-wrap {
 		flex-direction: row;
 		height: auto;
+		margin-right: 0;
+		margin-top: 0;
 	}
 
 	.about-comm .content-wrap .content-item {
 		flex-basis: 100%;
 		margin-bottom: 20px;
+		padding-right: 0;
+		padding-top: 0;
 	}
 
 	.about-comm .content-wrap .content-item .subtitle {
