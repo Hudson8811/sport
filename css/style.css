@@ -174,15 +174,97 @@ header {
 }
 
 .home-events {
-	height: 900px;
+	padding: 125px 0 150px;
 	background: url(../img/home/events-bg.png) no-repeat right bottom;
+}
+
+.home-events .mobile_title{
+	display: none;
+}
+
+.home-events h2{
+	margin-bottom: 65px;
+	text-transform: uppercase;
+	font-size: 50px;
+	line-height: 62px;
+	font-weight: 700;
+	color: #0C4398;
+}
+
+.home-events .events_text{
+	max-width: 540px;
+	margin-left: auto;
+}
+
+.home-events .events_text span{
+	font-size: 16px;
+	line-height: 21px;
+	color: #BF942D;
+	margin-bottom: 13px;
+	display: block;
+}
+
+.home-events .events_text h4{
+	position: relative;
+	margin-bottom: 55px;
+	font-size: 25px;
+	line-height: 31px;
+	color: #323B47;
+	font-weight: 700;
+}
+
+.home-events .events_text h4::after{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 140%;
+	height: 1px;
+	background-color: #cccccc;
+	left: -200px;
+	bottom: -20px;
+}
+
+.home-events .back{
+	padding-left: 20px;
+	box-sizing: border-box;
+	position: relative;
+	display: none;
+	margin-bottom: 45px;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 700;
+	color: #264068;
+	cursor: pointer;
+}
+
+.home-events .back::before{
+	content: "";
+	position: absolute;
+	display: block;
+	background: url(../img/arrow_back.png) no-repeat center center;
+	width: 6px;
+	height: 11px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.home-events .events_text p{
+	font-size: 18px;
+	line-height: 29px;
+	color: #323B47;
+}
+
+.home-events .events_text .block_1 + .block_1{
+	margin-top: 35px;
 }
 
 .home-announcements {
 	background: #fff;
 	width: 80%;
 	position: absolute;
-	top: -400px;
+	top: 0;
 	padding-bottom: 240px;
 
 }
@@ -208,7 +290,7 @@ header {
 	display: block;
 	color: #BF942D;
 	font-size: 16px;
-	
+
 }
 
 /*.home-announcements-item a {
@@ -217,7 +299,7 @@ header {
 	font-weight: 700;
 	font-size: 25px;
 	padding: 20px 0;
-	
+
 }*/
 
 .home-announcements-item p {
@@ -433,7 +515,7 @@ box-shadow: 26px 23px 56px -32px rgba(0,0,0,0.75);
 	display: block;
 	color: #BF942D;
 	font-size: 16px;
-	
+
 }
 
 .post-title {
@@ -742,11 +824,12 @@ box-shadow: -1px 8px 97px -59px rgba(0,0,0,0.75);
 
 .home-gallery-photo-more .text {
 	position: absolute;
-	top: 35%;
-	left: 39%;
+	top: 50%;
+	left: 50%;
 	color: #fff;
 	font-size: 14px;
 	width: 25%;
+	transform: translate(-50%,-50%);
 }
 
 .home-gallery-photo-more .text img {
@@ -770,11 +853,11 @@ box-shadow: -1px 8px 97px -59px rgba(0,0,0,0.75);
   top: 10%;
   left: 11%;
 }
- 
+
 #magnify img {
 	width: 100%;
 }
- 
+
 #overlay {
   display: none;
   background: #000;
@@ -786,7 +869,7 @@ box-shadow: -1px 8px 97px -59px rgba(0,0,0,0.75);
   opacity: 0.5;
   z-index: 9990;
 }
- 
+
 #close-popup {
   width: 50px;
   height: 50px;
@@ -795,7 +878,7 @@ box-shadow: -1px 8px 97px -59px rgba(0,0,0,0.75);
   top: 15px;
   right: 15px;
 }
- 
+
 #close-popup i {
   width: 50px;
   height: 50px;
@@ -1020,7 +1103,7 @@ box-shadow: 7px 10px 100px -20px rgba(0,0,0,0.75);
 	border: 1px solid #CFCBC6;
 	right: -75%;
 	top: 200px;
-	z-index: 1;	
+	z-index: 1;
 }
 
 .racting-fixture {
@@ -1030,6 +1113,84 @@ box-shadow: 7px 10px 100px -20px rgba(0,0,0,0.75);
 
 .racting-fixture .section-title {
 	margin-bottom: 60px;
+}
+
+.ui-datepicker-multi{
+	box-shadow: 20px 20px 50px rgba(0,0,0,0.4);
+	width: 460px;
+}
+
+.ui-datepicker-multi > div:nth-child(1){
+	background-color: #fff;
+}
+
+.ui-datepicker-multi > div:nth-child(3){
+	background-color: #BF942D;
+}
+
+.ui-datepicker-multi > div{
+	padding: 45px 70px 40px 50px;
+	box-sizing: border-box;
+}
+
+.ui-datepicker-row-break{
+	padding: 0 !important;
+}
+
+.ui-datepicker-multi .ui-datepicker-header .ui-datepicker-prev::after{
+	display: none;
+}
+
+.ui-datepicker-multi .ui-datepicker-header .ui-datepicker-next::after{
+	display: none;
+}
+
+.ui-datepicker-multi .ui-datepicker-title{
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.ui-datepicker-multi .ui-datepicker-header{
+	margin-bottom: 40px;
+}
+
+.ui-datepicker-multi > div:nth-child(3) .ui-datepicker-title{
+	color: #fff;
+}
+
+.ui-datepicker-multi .ui-datepicker-calendar tr th{
+	font-size: 11px;
+	line-height: 13px;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.ui-datepicker-multi > div:nth-child(3) .ui-datepicker-calendar tr th{
+	color: #0C4398;
+}
+
+.ui-datepicker-multi .ui-datepicker-calendar tr td{
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.ui-datepicker-multi > div:nth-child(3) .ui-datepicker-calendar tr td a{
+	color: #fff;
+}
+
+.ui-datepicker-multi .ui-datepicker-calendar .ui-state-highlight{
+	width: 25px;
+	height: 25px;
+}
+
+.ui-datepicker-multi .ui-datepicker-title::before{
+	width: 60px;
+	left: 50px;
+}
+
+.ui-datepicker-multi .ui-datepicker-title::after{
+	width: 60px;
+	right: 0;
 }
 
 .racing-fixture-calendar-block {
@@ -1317,6 +1478,9 @@ box-shadow: 7px 10px 100px -20px rgba(0,0,0,0.75);
 
 .about-info-logo .img-wrap img {
 	width: 100%;
+	position: relative;
+	display: block;
+	height: auto;
 }
 
 .about-info p {
@@ -1461,7 +1625,7 @@ box-shadow: 45px -23px 63px -46px rgba(0,0,0,0.75);
 	padding: 20px 0;
 	width: 100%;
 	z-index: 10;
--webkit-box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15); 
+-webkit-box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 }
 
@@ -1622,7 +1786,7 @@ box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 	padding: 20px 0;
 	width: 100%;
 	z-index: 10;
--webkit-box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15); 
+-webkit-box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 }
 
@@ -1704,7 +1868,7 @@ box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 }
 
 .about-clubs-content .video-block {
-	position: absolute; 
+	position: absolute;
 	left: 5%;
 	top: 40%;
 	width: 10%;
@@ -1816,7 +1980,7 @@ box-shadow: 5px 19px 37px 1px rgba(0,0,0,0.15);
 	position: absolute;
 	right: 0;
 	top: 0;
-	background-color: rgba(255, 255, 255, 0.5); 
+	background-color: rgba(255, 255, 255, 0.5);
 	z-index: 10;
 	opacity: 0;
 	transition: all .5s ease;
@@ -2187,7 +2351,7 @@ box-shadow: 6px 5px 34px -2px rgba(0,0,0,0.57);
 	position: absolute;
 	right: 0;
 	top: 0;
-	background-color: rgba(255, 255, 255, 0.5); 
+	background-color: rgba(255, 255, 255, 0.5);
 	z-index: 999;
 	opacity: 0;
 	transition: all .5s ease;
@@ -2220,6 +2384,14 @@ box-shadow: 6px 5px 34px -2px rgba(0,0,0,0.57);
 	position: relative;
 }
 
+.fac-banquet .clubs-modal .content{
+	background-color: #264068;
+}
+
+.fac-banquet .clubs-modal .content .close-btn{
+	color: #BF942D;
+}
+
 .fac-fb .clubs-modal .content .close-btn:after {
 	content: '';
 	background: url(../img/about/cross.png) no-repeat center;
@@ -2234,6 +2406,10 @@ box-shadow: 6px 5px 34px -2px rgba(0,0,0,0.57);
 .fac-fb .clubs-modal .content hr {
 	background: #fff;
 	margin: 30px 0;
+}
+
+.fac-banquet .clubs-modal .content .close-btn:after{
+	background-image: url(../img/about/cross_2.png);
 }
 
 .fac-fb .clubs-modal .content .list {
@@ -2340,7 +2516,7 @@ padding-bottom: 25px;
 	background: url(../img/news-page/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 30vh;
+	min-height: 30vh;
 }
 
 .newspage-content {
@@ -2410,7 +2586,114 @@ padding-bottom: 25px;
 	background: url(../img/members-page/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 30vh;
+	min-height: 30vh;
+}
+
+.calendar{
+	position: relative;
+	z-index: 4;
+	width: 100%;
+  height: auto;
+	background-color: #fff;
+	box-shadow: 20px 20px 70px rgba(0,0,0,0.4);
+	padding: 68px 105px;
+	box-sizing: border-box;
+}
+
+.ui-datepicker-title{
+	text-align: center;
+	position: relative;
+	font-size: 26px;
+	line-height: 32px;
+	color: #0C4398;
+	text-transform: uppercase;
+	font-weight: 700;
+	z-index: 400;
+}
+
+.ui-datepicker-header{
+	position: relative;
+	margin-bottom: 65px;
+	cursor: pointer;
+}
+
+.ui-datepicker-title::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 1px;
+	background-color: #cccccc;
+	top: 50%;
+	left: 110px;
+	transform: translate(-50%, 0%);
+	z-index: -1;
+}
+
+.ui-datepicker-title::after{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 1px;
+	background-color: #cccccc;
+	top: 50%;
+	right: 20px;
+	transform: translate(-50%, 0%);
+	z-index: -1;
+}
+
+.ui-datepicker-header .ui-datepicker-prev::after{
+	content: "назад";
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.ui-datepicker-header .ui-datepicker-next::after{
+	content: "вперёд";
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.ui-datepicker-calendar{
+	width: 100%;
+}
+
+.ui-datepicker-calendar tr th{
+	font-size: 22px;
+	line-height: 27px;
+	color: #BF942D;
+	font-weight: 700;
+	padding: 0 15px 15px;
+	text-align: center;
+}
+
+.ui-datepicker-calendar tr td{
+	font-size: 25px;
+	line-height: 44px;
+	font-weight: 700;
+	color: #323B47;
+	text-align: center;
+}
+
+.ui-datepicker-calendar .ui-state-highlight{
+	background-color: #0C4398;
+	color: #fff;
+	box-sizing: border-box;
+	width: 44px;
+	height: 44px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 /*REGISTER*/
@@ -2419,7 +2702,7 @@ padding-bottom: 25px;
 	background: url(../img/register/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 30vh;
+	min-height: 30vh;
 }
 
 .register-content-block {
@@ -2525,7 +2808,7 @@ padding-bottom: 25px;
 	background: url(../img/login/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 30vh;
+	min-height: 30vh;
 }
 
 .login-form h1 {
@@ -2543,6 +2826,7 @@ padding-bottom: 25px;
 	margin: 50px auto;
 	color: #979696;
 	font-size: 16px;
+	opacity: 0.37;
 }
 
 .login-form form input:last-of-type {
@@ -2555,8 +2839,9 @@ padding-bottom: 25px;
 	background: url(../img/contact/main-bg.png) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 30vh;
+
 	position: relative;
+	min-height: 362px;
 }
 
 .contact-form {
@@ -2679,11 +2964,3 @@ padding-bottom: 25px;
 	padding: 0;
 	font-weight: 500;
 }
-
-
-
-
-
-
-
-

@@ -2,9 +2,39 @@ $(document).ready(function(){
 
     // POP-UP
 
-    $('.video-popup').magnificPopup({ 
+    $('.video-popup').magnificPopup({
         type: 'iframe'
     });
+
+    //Календарь на главной
+    var holidays = [
+	[1,1],
+	[7,1],
+	[23,2],
+	[8,3],
+	[1,5],
+	[9,5],
+	[12,6],
+	[4,11]
+];
+
+$(function(){
+	$("#datepicker").datepicker({
+		beforeShowDay: function(date){
+			for (var i = 0; i < holidays.length; i++) {
+				if (holidays[i][0] == date.getDate() && holidays[i][1] - 1 == date.getMonth()) {
+					return [false];
+				}
+			}
+			return [true];
+		}
+	});
+});
+
+$(function(){
+	$(".datepicker").datepicker("option", "numberOfMonths");
+  $( ".racing_calendar" ).datepicker({ numberOfMonths: [2, 1] });
+});
 
     // ANNOUNCEMENTS SLIDER
 
@@ -18,7 +48,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#announcements-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -46,7 +76,7 @@ $(document).ready(function(){
         nav:false,
         margin:30,
         dots:false,
-        loop:true, 
+        loop:true,
         responsive:{
         0:{
             items:2
@@ -86,7 +116,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#news-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -114,7 +144,7 @@ $(document).ready(function(){
         nav:false,
         margin:20,
         dots:false,
-        loop:true, 
+        loop:true,
         responsive:{
         0:{
             items:1,
@@ -149,7 +179,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#about-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -176,10 +206,10 @@ $(document).ready(function(){
 
         $('#overlay, #magnify').fadeIn('fast');
       });
-      
+
       $('body').on('click', '#close-popup, #overlay', function(event) {
         event.preventDefault();
-     
+
         $('#overlay, #magnify').fadeOut('fast', function() {
           $('#close-popup, #magnify, #overlay').remove();
         });
@@ -198,7 +228,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#racing-card-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -230,7 +260,7 @@ $(document).ready(function(){
 
     $('.racing-item-content .img-block').click(function(event) {
         var path = $(this).children('.img-bg').attr('src');
-        $('.img-scale-block img').attr('src', path);     
+        $('.img-scale-block img').attr('src', path);
     });
 
     // ABOUT-HISTORY
@@ -244,7 +274,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#about-history-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -310,7 +340,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#about-clubs-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -340,7 +370,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#fb-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -384,7 +414,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#banquet-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -427,7 +457,7 @@ $(document).ready(function(){
         dots:true,
         pagination: true,
         dotsContainer:'#conc-dots',
-        dotsEach: true,   
+        dotsEach: true,
         responsive:{
         0:{
             items:1
@@ -468,10 +498,10 @@ $(document).ready(function(){
 
         $('#overlay, #magnify').fadeIn('fast');
       });
-      
+
       $('body').on('click', '#close-popup, #overlay', function(event) {
         event.preventDefault();
-     
+
         $('#overlay, #magnify').fadeOut('fast', function() {
           $('#close-popup, #magnify, #overlay').remove();
         });
@@ -495,7 +525,7 @@ $(document).ready(function(){
 
     });
 
-    // ADAPTIVE 
+    // ADAPTIVE
 
     if(window.matchMedia('(max-width: 992px)').matches){
 
@@ -567,8 +597,8 @@ $(document).ready(function(){
 
     $('.mobile-nav-bg').click(function(e) {
         var div = $(".mobile-nav");
-        if (!div.is(e.target) 
-            && div.has(e.target).length === 0) { 
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
             $('.mobile-nav-bg').removeClass('active');
             $('.mobile-nav').removeClass('active');
             $('.mobile-nav-close').hide();
@@ -576,7 +606,7 @@ $(document).ready(function(){
         }
     });
 
-    
+
 
 
 });

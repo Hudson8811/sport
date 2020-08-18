@@ -1,9 +1,112 @@
+@media screen and (max-width: 1500px) {
+	.topmenu li a{font-size: 14px;}
+	.topmenu{padding: 12px 0;}
+	.main-menu{width: 80%; left: 50%; transform: translateX(-50%);}
+	.about-clubs-menu .container{max-width: 100%;}
+	.facilities-main .main-menu{left: 50%;}
+	.calendar{padding: 40px 75px; height: 380px;}
+	.ui-datepicker-calendar tr td{font-size: 15px; line-height: 27px;}
+	.ui-datepicker-title{font-size: 15px; line-height: 18px;}
+	.ui-datepicker-header .ui-datepicker-prev::after{font-size: 10px;}
+	.ui-datepicker-header .ui-datepicker-next::after{font-size: 10px;}
+	.ui-datepicker-calendar tr th{font-size: 13px; line-height: 16px;}
+	.home-events h2{font-size: 35px; line-height: 43px;}
+	.ui-datepicker-calendar .ui-state-highlight{width: 27px; height: 27px;}
+}
+
+@media screen and (max-width: 1400px) {
+	.racing-fixture-calendar-block {margin-right: 30px; width: auto;}
+}
+
+@media screen and (max-width: 1300px) {
+	.main-menu{width: 90%;}
+	.main-menu ul li a{font-size: 17px;}
+	.about-history-menu ul li a{font-size: 17px;}
+	.about-clubs-menu ul li a{font-size: 17px;}
+}
+
+@media screen and (max-width: 1100px) {
+	.calendar{padding: 40px;}
+}
+
 @media (max-width: 992px) {
+  .racting-fixture{padding-top: 30px;}
+
+	.racting-fixture .row{
+		-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+  }
+
+	.racing-fixture-calendar-block{
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+
+	.ui-datepicker-multi{
+		width: 100%;
+	}
+
+	.racing-fixture-content{
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+
+	.home-events .events_text{
+		display: none;
+	}
+
+	.home-events h2{
+		display: none;
+	}
+
+	.home-events .mobile_title{
+		display: block;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 25px;
+		padding-left: 11%;
+	}
+
+	.home-events .events_text span{
+		font-size: 12px;
+		line-height: 15px;
+		margin-bottom: 9px;
+	}
+
+	.home-events .events_text h4{
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 41px;
+	}
+
+	.home-events .events_text p{
+		font-size: 14px;
+		line-height: 25px;
+	}
+
+	.home-events{
+		padding: 50px 0 60px;
+	}
 	/*HOME*/
+	header .logo-box{
+		width: 100%;
+	}
+
+	.about-info-logo .img-wrap{
+		padding: 0 10px;
+	}
 
 	.section-title {
 		font-size: 20px;
 	}
+
+	footer .footer_logo{width: 100%; text-align: center; order: 3}
+
+	footer .row{display: flex; flex-direction: column;}
+	footer .row .block_1{order: 1;}
+	footer .row .block_2{order: 2;}
 
 	.post-title {
 		font-size: 18px;
@@ -29,6 +132,10 @@
 		top: 65px;
 	}
 
+	.register-content-block{
+		width: 90%;
+	}
+
 	.home-slider {
 		height: auto;
 		padding-bottom: 360px;
@@ -39,7 +146,6 @@
 	}
 	.home-main{
 		height: auto;
-		min-height: 100vh;
 		padding-bottom: 139px;
 	}
 	.home-main .title-bold {
@@ -101,8 +207,9 @@
 
 	.mobile-show {
 		display: inline-block;
+		vertical-align: middle;
 		position: absolute;
-		top: 35px;
+		top: 60px;
 		right: 11%;
 		background: url(../img/plus.png) no-repeat center;
 		-webkit-background-size: contain;
@@ -115,7 +222,7 @@
 	.mobile-show.active {
 		background: url(../img/minus.png) no-repeat center;
 		-webkit-background-size: contain;
-		background-size: contain;		
+		background-size: contain;
 	}
 
 	.home-announcements-item p {
@@ -149,7 +256,7 @@
 	}
 
 	.home-photo-slider .owl-item {
-		
+
 	}
 
 	.home-photo-slider-item {
@@ -561,13 +668,12 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	/*ABOUT*/
 
 	.main-menu {
-		bottom: auto;
-		top: 97vh;
+		bottom: 0;
 		z-index: 100;
 		cursor: pointer;
 		width: 78%;
-		left: 11%;
 		padding: 0;
+		margin-bottom:-25px
 	}
 
 	.main-menu ul {
@@ -628,7 +734,7 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	.main-menu-overlay.active {
 		visibility: visible;
 		opacity: 0.5;
-		
+
 	}
 
 	.main-menu ul li a {
@@ -793,7 +899,7 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	}
 
 	.about-comm .content-wrap .content-item {
-		flex-basis: 100%;
+		width: 50%;
 		margin-bottom: 20px;
 		padding-right: 0;
 		padding-top: 0;
@@ -804,7 +910,7 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	}
 
 	.about-comm .content-wrap .content-item .title {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.about-comm hr {
@@ -881,6 +987,14 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 	}
 
 	.about-clubs-content .img-block {
+		top: auto;
+    bottom: 40px;
+    width: 37%;
+    left: auto;
+    right: 36%;
+	}
+
+	.about-clubs-content .img-block:after{
 		display: none;
 	}
 
@@ -942,10 +1056,65 @@ box-shadow: 2px 40px 60px -38px rgba(0,0,0,0.54);
 
 	.about-faq-item .title {
 		font-size: 18px;
+		padding-right: 30px;
+		box-sizing: border-box;
+		vertical-align: middle;
 	}
 
+  .fac-fb .slider-nav{
+		position: static;
+	}
 
+ .racing-info-wrap{flex-direction: column;}
+ .racing-video{width: 100%; margin-bottom: 20px;}
+ .racing-info-border{display: none;}
+ .racing-info-text{width: 100%; margin: 0;}
+ .racing-video .play{top: 50%; left: 50%; transform: translate(-50%,-50%); display: block;}
+ .home-events .back{display: block;}
 
+}
 
+@media screen and (max-width: 768px) {
+	.racing-card-slider-block{padding-right: 0; padding-left: 15px; box-sizing: border-box; margin-top: 20px;}
+}
 
+@media screen and (max-width: 576px) {
+	.container{max-width: 90%;}
+	.main-text p{padding: 21px; padding-top: 0;}
+	.main-text{margin-top: 115px; margin-bottom: 0;}
+	.about-info .quote{width: 100%;}
+	.message-block .message-border{padding: 30px;}
+	.message-block .text-block p:before{left: -20px;}
+	.about-comm .content-wrap .content-item{width: 100%;}
+	.about-clubs-content .info-block{padding: 30px;}
+	footer .copyright{margin-top: 10px;}
+	.about-clubs-content .info-block .title{font-size: 18px; line-height: 22px;}
+	.about-faq .section-title{margin-bottom: 0;}
+	.about-clubs-content .clubs-modal .content{right: 50%; transform: translateX(-50%); width: 100%; min-height: auto;}
+	.register-content-block p{width: 100%;}
+	.register-content-block input{width: 100%;}
+	.contact-form textarea{width: 100%;}
+	.fac-banquet{margin-top: 60px;}
+	.fac-fb .clubs-modal .content{width: 100%; min-height: auto;}
+	.home-promotion-slider-item p{padding: 20px 25px;}
+	.register-content-block h1{font-size: 20px;}
+	.register-content-block input{font-size: 12px;}
+	.newspage-content .container{max-width: 78%;}
+	.racing-video .play{width: 70px; height: 70px;}
+	.racing-info-text{padding: 40px 15px;}
+	.racing-info-text table tr th{padding-right: 15px;}
+	.date-item ul li{flex-basis: 20%;}
+	.slider-dots-wrap{padding-left: 0;}
+	.slider-dots:after{right: -15px;}
+	.racing-card-slider-block .slider-nav .slider-nav-link{padding-left: 20px;}
+	.ui-datepicker-title{font-size: 9px; line-height: 11px;}
+	.ui-datepicker-header .ui-datepicker-prev::after{font-size: 8px;}
+	.ui-datepicker-header .ui-datepicker-next::after{font-size: 8px;}
+	.ui-datepicker-calendar tr th{font-size: 8px; line-height: 10px; padding: 0;}
+	.ui-datepicker-calendar tr td{font-size: 9px; line-height: 19px;}
+	.calendar{padding: 25px 40px; height: 256px;}
+	.ui-datepicker-calendar .ui-state-highlight{width: 19px; height: 19px;}
+	.ui-datepicker-header{margin-bottom: 30px;}
+	.ui-datepicker-multi > div{padding: 30px;}
+	.racing-fixture-content p{font-size: 16px;}
 }
