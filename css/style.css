@@ -2603,7 +2603,7 @@ padding-bottom: 25px;
 .ui-datepicker-title{
 	text-align: center;
 	position: relative;
-	font-size: 26px;
+	font-size: 24px;
 	line-height: 32px;
 	color: #0C4398;
 	text-transform: uppercase;
@@ -2643,8 +2643,8 @@ padding-bottom: 25px;
 	z-index: -1;
 }
 
-.ui-datepicker-header .ui-datepicker-prev::after{
-	content: "назад";
+.ui-datepicker-header .ui-datepicker-prev{
+
 	position: absolute;
 	display: block;
 	top: 50%;
@@ -2652,10 +2652,14 @@ padding-bottom: 25px;
 	transform: translateY(-50%);
 	font-weight: 500;
 	cursor: pointer;
+	color: #CFCBC6 !important;
+	font-size: 10px;
+	z-index: 500;
+
 }
 
-.ui-datepicker-header .ui-datepicker-next::after{
-	content: "вперёд";
+.ui-datepicker-header .ui-datepicker-next{
+
 	position: absolute;
 	display: block;
 	top: 50%;
@@ -2663,6 +2667,9 @@ padding-bottom: 25px;
 	transform: translateY(-50%);
 	font-weight: 500;
 	cursor: pointer;
+	color: #CFCBC6 !important;
+	font-size: 10px;
+	z-index: 500;
 }
 
 .ui-datepicker-calendar{

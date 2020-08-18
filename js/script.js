@@ -20,6 +20,19 @@ $(document).ready(function(){
 
 $(function(){
 	$("#datepicker").datepicker({
+        closeText: "Done",
+	prevText: "PREVIOUS",
+	nextText: "NEXT",
+	currentText: "Today",
+	monthNames: [ "January","February","March","April","May","June",
+	"July","August","September","October","November","December" ],
+	monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+	"Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+	dayNames: [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
+	dayNamesShort: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
+	dayNamesMin: [ "Su","Mo","Tu","We","Th","Fr","Sa" ],
+	weekHeader: "Wk",
+        
 		beforeShowDay: function(date){
 			for (var i = 0; i < holidays.length; i++) {
 				if (holidays[i][0] == date.getDate() && holidays[i][1] - 1 == date.getMonth()) {
@@ -28,12 +41,25 @@ $(function(){
 			}
 			return [true];
 		}
-	});
+    });
+  
 });
 
 $(function(){
 	$(".datepicker").datepicker("option", "numberOfMonths");
-  $( ".racing_calendar" ).datepicker({ numberOfMonths: [2, 1] });
+  $( ".racing_calendar" ).datepicker({ numberOfMonths: [2, 1],
+    closeText: "Done",
+
+	currentText: "Today",
+	monthNames: [ "January","February","March","April","May","June",
+	"July","August","September","October","November","December" ],
+	monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+	"Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+	dayNames: [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
+	dayNamesShort: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
+	dayNamesMin: [ "Su","Mo","Tu","We","Th","Fr","Sa" ],
+	weekHeader: "Wk",
+});
 });
 
     // ANNOUNCEMENTS SLIDER
